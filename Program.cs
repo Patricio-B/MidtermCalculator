@@ -8,6 +8,7 @@ namespace MidtermCalculator
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("What's up");
+            Console.WriteLine("testing");
         }
     }
 }
