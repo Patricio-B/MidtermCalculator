@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidtermCalculator", "MidtermCalculator.csproj", "{2F52B9EE-29AB-40A5-B211-107F52A35E0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F52B9EE-29AB-40A5-B211-107F52A35E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F52B9EE-29AB-40A5-B211-107F52A35E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F52B9EE-29AB-40A5-B211-107F52A35E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F52B9EE-29AB-40A5-B211-107F52A35E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64F589A6-4E05-476A-9459-079DD0E8A16D}
+	EndGlobalSection
+EndGlobal
