@@ -1,4 +1,5 @@
 ﻿using System;
+using MidtermCalculator.Events;
 
 namespace MidtermCalculator
 {
@@ -8,6 +9,10 @@ namespace MidtermCalculator
         {
             //Calculator class instantiation into a calculator object
             Calculator _calculator = new Calculator();
+
+            var _calculation = new CreateCalculationEvent();
+            var 
+      
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
