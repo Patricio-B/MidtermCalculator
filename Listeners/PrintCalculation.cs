@@ -5,7 +5,7 @@ using MidtermCalculator.Events;
 
 namespace MidtermCalculator.Listeners
 {
-    public class DisplayCalculation
+    public class PrintCalculation
     {
         public void OnCalculation(object sender, CalculationEventArgs args)
         {

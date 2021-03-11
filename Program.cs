@@ -1,5 +1,6 @@
 ﻿using System;
 using MidtermCalculator.Events;
+using MidtermCalculator.Listeners;
 
 namespace MidtermCalculator
 {
@@ -11,7 +12,7 @@ namespace MidtermCalculator
             Calculator _calculator = new Calculator();
 
             var _calculation = new CreateCalculationEvent();
-            var 
+            var _showCalculation = new PrintCalculation();
       
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
