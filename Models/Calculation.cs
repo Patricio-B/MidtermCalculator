@@ -60,7 +60,6 @@ namespace Models
         }
 
 
-
         //This calls whatever operation was stored i.e. mult, div, add, sub and returns the answer
         public double GetResult()
         {
