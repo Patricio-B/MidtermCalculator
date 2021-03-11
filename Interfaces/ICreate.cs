@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CalculatorProject.Models;
+using Models;
 
-namespace CalculatorProject.Interfaces
+namespace Interfaces
 {
 
     public interface ICreate

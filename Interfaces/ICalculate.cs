@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using CalculatorProject.Models;
 
-namespace CalculatorProject.Interfaces
+namespace Interfaces
 {
     public interface ICalculate
     {

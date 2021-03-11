@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CalculatorProject.Models;
-using CalculatorProject.Interfaces;
+using Models;
+using Interfaces;
 
 namespace MidtermCalculator
 {

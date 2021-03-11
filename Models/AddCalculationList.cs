@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CalculatorProject.Interfaces;
+using Interfaces;
 
-namespace CalculatorProject.Models
+namespace Models
 {
     public class AddCalculationList
     {

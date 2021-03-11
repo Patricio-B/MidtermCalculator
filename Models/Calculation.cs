@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using CalculatorProject.CalculatorFunctions;
-using CalculatorProject.Interfaces;
+using Interfaces;
 
 
 namespace CalculatorProject.Models
