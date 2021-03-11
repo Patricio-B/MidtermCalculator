@@ -6,9 +6,8 @@ namespace MidtermCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("What's up");
-            Console.WriteLine("testing");
+            //Calculator class instantiation into a calculator object
+            Calculator _calculator = new Calculator();
         }
     }
 }
