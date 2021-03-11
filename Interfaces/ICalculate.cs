@@ -8,7 +8,7 @@ namespace Interfaces
     public interface ICalculate
     {
 
-        double GetResult();
+        public double GetResult();
 
         /* interface ListCalculations
          {
