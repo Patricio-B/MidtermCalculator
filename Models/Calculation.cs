@@ -5,7 +5,7 @@ using CalculatorProject.CalculatorFunctions;
 using Interfaces;
 
 
-namespace CalculatorProject.Models
+namespace Models
 {
     public class Calculation : ICalculate
     {

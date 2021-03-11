@@ -4,6 +4,7 @@ using System.Text;
 using Models;
 using Interfaces;
 
+
 namespace MidtermCalculator
 {
     public class Calculator : ICreate
