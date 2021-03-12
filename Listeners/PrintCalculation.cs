@@ -9,7 +9,7 @@ namespace MidtermCalculator.Listeners
     {
         public void OnCalculation(object sender, CalculationEventArgs args)
         {
-            Console.WriteLine("Calculation Complete. Result is: " + args.Calculation.GetResult());
+            //Console.WriteLine("Calculation Complete. Result is: " + args.Calculation.GetResult());
         }
     }
 

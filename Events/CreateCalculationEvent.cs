@@ -13,10 +13,10 @@ namespace MidtermCalculator.Events
         {
             OnCalculation(calculation);
         }
-
+        
         protected virtual void OnCalculation(ICalculate calculation)
         {
-            CalculationCompleted.Invoke(this, new CalculationEventArgs() { Calculation = calculation });
+            //CalculationCompleted.Invoke(this, new CalculationEventArgs() { Calculation = calculation });
         }
     }
 }
