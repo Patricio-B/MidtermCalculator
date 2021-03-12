@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Models;
+using MidtermCalculator.Models;
 
-namespace Interfaces
+namespace MidtermCalculator.Interfaces
 {
     public interface ICalculate
     {

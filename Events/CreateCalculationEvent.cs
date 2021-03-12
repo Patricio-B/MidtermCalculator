@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Interfaces;
+using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Events
 {

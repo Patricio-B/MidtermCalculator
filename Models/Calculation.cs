@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using MidtermCalculator.CalculatorFunctions;
-using Interfaces;
+using MidtermCalculator.Interfaces;
+using MidtermCalculator.Publisher;
 
 
-namespace Models
+namespace MidtermCalculator.Models
 {
-    public class Calculation : ICalculate
+    public class Calculation : ICalculate, IListen
     {
         //store 1 value
         public double A { get; set; }
@@ -65,6 +66,14 @@ namespace Models
         {
             return Operation(A, B);
 
+        }
+
+        public void Update(IPublish subject)
+        {
+        
+            {
+                Console.WriteLine("ConcreteObserverA: Reacted to the event.");
+            }
         }
     }
 }

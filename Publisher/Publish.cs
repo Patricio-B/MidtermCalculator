@@ -2,26 +2,49 @@
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
 using MidtermCalculator.Events;
+using System.Collections.Generic;
+using System.Threading;
 
-namespace MidtermCalculator.Publish
+namespace MidtermCalculator.Publisher
 {
-    public class Publish<T> : IPublish<T>
+    public class Publish : IPublish
     {
-        //Defined datapublisher event
-        public event EventHandler<CreateCalculationEvent<T>> DataPublisher;
+        // For the sake of simplicity, the Subject's state, essential to all
+        // subscribers, is stored in this variable.
 
-        private void OnDataPublisher(CreateCalculationEvent<T> args)
+        // List of subscribers. In real life, the list of subscribers can be
+        // stored more comprehensively (categorized by event type, etc.).
+        private List<IListen> _observers = new List<IListen>();
+
+        // The subscription management methods.
+        public void Attach(IListen observer)
         {
-            var handler = DataPublisher;
-            if (handler != null)
-                handler(this, args);
+            Console.WriteLine("Subject: Attached an observer.");
+            this._observers.Add(observer);
         }
 
-
-        public void PublishData(T data)
+        public void Detach(IListen observer)
         {
-            CreateCalculationEvent<T> message = (CreateCalculationEvent<T>)Activator.CreateInstance(typeof(CreateCalculationEvent<T>), new object[] { data });
-            OnDataPublisher(message);
+            this._observers.Remove(observer);
+            Console.WriteLine("Subject: Detached an observer.");
+        }
+
+        // Trigger an update in each subscriber.
+        public void Notify()
+        {
+            Console.WriteLine("Subject: Notifying observers...");
+
+            foreach (var observer in _observers)
+            {
+                observer.Update(this);
+            }
+        }
+
+        public void PrintCalc()
+        {
+
+            Console.WriteLine("Print Calculation Test ");
+            this.Notify();
         }
     }
 }

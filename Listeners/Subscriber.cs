@@ -1,10 +1,10 @@
-﻿using System;
+﻿/*using System;
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Listeners
 {
-    public class Subscriber<T>
+    public class Subscriber
     {
 
 
@@ -37,6 +37,6 @@ namespace MidtermCalculator.Listeners
         {
             Console.WriteLine(test.ToString());
             //calculatorManager.UnSbscribe(myMessageToken);
-        }*/
+        }
     }
-}
+}*/

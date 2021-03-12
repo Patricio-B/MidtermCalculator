@@ -2,6 +2,8 @@
 using MidtermCalculator.Events;
 using MidtermCalculator.Listeners;
 using MidtermCalculator.CalculatorFunctions;
+using MidtermCalculator.Publisher;
+using MidtermCalculator.Models;
 
 namespace MidtermCalculator
 {
@@ -12,8 +14,22 @@ namespace MidtermCalculator
             //Calculator class instantiation into a calculator object
             Calculator _calculator = new Calculator();
 
-           /* var _calculation = new CreateCalculationEvent();
-            var _showCalculation = new PrintCalculation();*/
+            var publisher = new Publish();
+            var calculationObserver = new Calculation();
+            publisher.Attach(calculationObserver);
+
+            var printCalc = new PrintCalculation();
+            publisher.Attach(printCalc);
+
+            publisher.PrintCalc();
+            publisher.PrintCalc();
+
+            publisher.Detach(printCalc);
+
+            publisher.PrintCalc();
+
+            /* var _calculation = new CreateCalculationEvent();
+             var _showCalculation = new PrintCalculation();*/
 
             Func<double, double, double> operation = Operations.Sum;
 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Models;
-using Interfaces;
+using MidtermCalculator.Models;
+using MidtermCalculator.Interfaces;
 
 
 namespace MidtermCalculator

@@ -4,10 +4,15 @@ using MidtermCalculator.Events;
 
 namespace MidtermCalculator.Interfaces
 {
-    public interface IPublish<T>
+    public interface IPublish
     {
-        event EventHandler<CreateCalculationEvent<T>> DataPublisher;
-        //void OnDataPublisher(MessageArgument<T> args);
-        void PublishData(T data);
+        // Attach an observer to the subject.
+        void Attach(IListen observer);
+
+        // Detach an observer from the subject.
+        void Detach(IListen observer);
+
+        // Notify all observers about an event.
+        void Notify();
     }
 }
