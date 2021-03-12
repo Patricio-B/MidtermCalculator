@@ -9,5 +9,6 @@
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Events\" />
+    <Folder Include="Publisher\" />
   </ItemGroup>
 </Project>
