@@ -1,7 +1,6 @@
 ﻿using System;
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
-using MidtermCalculator.Events;
 using System.Collections.Generic;
 using System.Threading;
 

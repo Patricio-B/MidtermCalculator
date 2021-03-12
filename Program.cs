@@ -1,5 +1,4 @@
 ﻿using System;
-using MidtermCalculator.Events;
 using MidtermCalculator.Listeners;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Publisher;
