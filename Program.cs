@@ -12,8 +12,8 @@ namespace MidtermCalculator
             //Calculator class instantiation into a calculator object
             Calculator _calculator = new Calculator();
 
-            var _calculation = new CreateCalculationEvent();
-            var _showCalculation = new PrintCalculation();
+           /* var _calculation = new CreateCalculationEvent();
+            var _showCalculation = new PrintCalculation();*/
 
             Func<double, double, double> operation = Operations.Sum;
 
@@ -50,5 +50,6 @@ namespace MidtermCalculator
                 "view history by typing 'history'.\n");
 
             //user selects operation
+        }
     }
 }

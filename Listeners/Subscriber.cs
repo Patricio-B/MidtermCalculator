@@ -1,11 +1,10 @@
 ﻿using System;
-using MidtermCalculator.Publisher;
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Listeners
 {
-    public class Subscriber
+    public class Subscriber<T>
     {
 
 
