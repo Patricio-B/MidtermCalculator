@@ -17,7 +17,6 @@ namespace MidtermCalculator
 
             Func<double, double, double> operation = Operations.Sum;
 
-
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
                 "functionalities you would like by typing in the number associated " +
@@ -35,22 +34,21 @@ namespace MidtermCalculator
 
             Console.WriteLine("Please enter your first number:");
 
-            double num1 = Convert.ToDouble(Console.ReadLine());
+            //double num1 = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Please enter your second number:");
 
-            double num2 = Convert.ToDouble(Console.ReadLine());
+            //double num2 = Convert.ToDouble(Console.ReadLine());
 
-            var result = _calculator.Create(num1, num2, operation);
+            //var result = _calculator.Create(num1, num2, operation);
 
             Console.WriteLine("Result: \n");
 
-            _calculation.GrabCalculation(result);
+            //_calculation.GrabCalculation(result);
 
             Console.WriteLine("Please select another operation. You could also " +
                 "view history by typing 'history'.\n");
 
             //user selects operation
-        }
     }
 }

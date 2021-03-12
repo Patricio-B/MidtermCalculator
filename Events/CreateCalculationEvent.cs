@@ -5,9 +5,17 @@ using Interfaces;
 
 namespace MidtermCalculator.Events
 {
-    public class CreateCalculationEvent
+    public class CreateCalculationEvent<T> : EventArgs
     {
-        public event EventHandler<CalculationEventArgs> CalculationCompleted;
+
+        public T Message { get; private set; }
+        public CreateCalculationEvent(T message)
+        {
+            Message = message;
+        }
+
+
+        /*public event EventHandler<CalculationEventArgs> CalculationCompleted;
 
         public void GrabCalculation(ICalculate calculation)
         {
@@ -17,6 +25,6 @@ namespace MidtermCalculator.Events
         protected virtual void OnCalculation(ICalculate calculation)
         {
             CalculationCompleted.Invoke(this, new CalculationEventArgs() { Calculation = calculation });
-        }
+        }*/
     }
 }
