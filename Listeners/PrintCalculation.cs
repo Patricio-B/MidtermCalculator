@@ -19,7 +19,7 @@ namespace MidtermCalculator.Listeners
         {
           
             {
-                Console.WriteLine("ConcreteObserverB: Reacted to the event.");
+                Console.WriteLine("PrintCalculation: Reacted to the event.");
             }
         }
     }

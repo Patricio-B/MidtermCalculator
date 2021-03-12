@@ -70,9 +70,8 @@ namespace MidtermCalculator.Models
 
         public void Update(IPublish subject)
         {
-        
             {
-                Console.WriteLine("ConcreteObserverA: Reacted to the event.");
+                Console.WriteLine("Calculation: Reacted to the event.");
             }
         }
     }
