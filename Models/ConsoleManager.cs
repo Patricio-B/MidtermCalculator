@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Reflection;
 using MidtermCalculator.Models;
 using MidtermCalculator.Listeners;
@@ -23,18 +23,6 @@ namespace MidtermCalculator.Models
             CalculatorManager = calculatorManager;
         }
 
-        ~Subscription()
-        {
-            if (!isDisposed)
-                Dispose();
-        }
-
-        public void Dispose()
-        {
-            CalculatorManager.UnSbscribe(this);
-            isDisposed = true;
-        }
-
         public Action<Tmessage> CreatAction()
         {
             if (TargetObjet.Target != null && TargetObjet.IsAlive)
@@ -45,4 +33,4 @@ namespace MidtermCalculator.Models
             return null;
         }
     }
-}*/
+}

@@ -71,6 +71,8 @@ namespace MidtermCalculator.Models
         public void Update(IPublish subject)
         {
             {
+                //add to the history
+           
                 Console.WriteLine("Calculation: Reacted to the event.");
             }
         }

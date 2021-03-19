@@ -41,7 +41,7 @@ namespace MidtermCalculator.Publisher
 
         public void PrintCalc()
         {
-
+            //send the calculation to calculation
             Console.WriteLine("Print Calculation Test ");
             this.Notify();
         }
