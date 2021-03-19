@@ -5,7 +5,6 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Models
 {
-{
     public class History : ICreate
     {
         private AddCalculationList _listCalculations = new AddCalculationList();
@@ -28,5 +27,4 @@ namespace MidtermCalculator.Models
         }
     }
 
-}
 }

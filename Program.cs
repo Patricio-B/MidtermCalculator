@@ -47,13 +47,15 @@ namespace MidtermCalculator
 
             //user selects operation to use
 
-            Console.WriteLine("Please enter your first number:");
+            Console.WriteLine("Please enter your first number:\n");
 
-            //double num1 = Convert.ToDouble(Console.ReadLine());
+            var input1 = CalculatorManager.GetNumber();
 
-            Console.WriteLine("Please enter your second number:");
+            Console.WriteLine("Please enter your second number:\n");
 
-            //double num2 = Convert.ToDouble(Console.ReadLine());
+            var input2 = CalculatorManager.GetNumber();
+
+            Console.WriteLine("first: " + input1 + " second: " + input2);
 
             //var result = _calculator.Create(num1, num2, operation);
 
