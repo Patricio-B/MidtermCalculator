@@ -1,21 +1,25 @@
-﻿/*using System;
+﻿using System;
+using MidtermCalculator.Interfaces;
+
 namespace MidtermCalculator.Events
 {
-    abstract class Decorator : Component
+    public abstract class Decorator : ICalculate
     {
-        protected Component _component;
+        protected ICalculate _calculator;
 
-        public Decorator(Component component)
+        public Decorator(ICalculate calculator)
         {
-            this._component = component;
+            _calculator = calculator;
         }
 
-        public void SetComponent(Component component)
+        public void SetComponent(ICalculate calculator)
         {
-            this._component = component;
+            _calculator = calculator;
         }
 
         // The Decorator delegates all work to the wrapped component.
+        //get result ?? it could be static and triggered by an event
+        
         public override string Operation()
         {
             if (this._component != null)
@@ -28,4 +32,4 @@ namespace MidtermCalculator.Events
             }
         }
     }
-}*/
+}
