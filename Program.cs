@@ -10,7 +10,7 @@ namespace MidtermCalculator
     {
         static void Main(string[] args)
         {
-            //Calculator class instantiation into a calculator object
+           //Calculator class instantiation into a calculator object
             Calculator _calculator = new Calculator();
 
             var publisher = new Publish();
@@ -27,10 +27,10 @@ namespace MidtermCalculator
 
             publisher.PrintCalc();
 
-            /* var _calculation = new CreateCalculationEvent();
-             var _showCalculation = new PrintCalculation();*/
+             var _calculation = new CreateCalculationEvent();
+             var _showCalculation = new PrintCalculation();
 
-            //Func<double, double, double> operation = Operations.Sum;
+            Func<double, double, double> operation = Operations.Sum;
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
@@ -45,28 +45,28 @@ namespace MidtermCalculator
 
             Console.WriteLine("Which would you like to do first?\n");
 
-            //Func<double, double, double> operation = Operations.Sum;
+            //user selects operation to use
 
             Console.WriteLine("Please enter your first number:\n");
 
-            var input1 = CalculatorManager.GetNumber();
+            var a = CalculatorManager.GetNumber();
 
             Console.WriteLine("Please enter your second number:\n");
 
-            var input2 = CalculatorManager.GetNumber();
+            var b = CalculatorManager.GetNumber();
 
-            Console.WriteLine("first: " + input1 + " second: " + input2);
+            Console.WriteLine("first: " + a + " second: " + b);
 
-            var result = _calculator.Create(input1, input2, operation);
+            //var result = _calculator.Create(num1, num2, operation);
 
-            Console.WriteLine("Result: \n" + result);
+            Console.WriteLine("Result: \n");
 
             //_calculation.GrabCalculation(result);
 
             Console.WriteLine("Please select another operation. You could also " +
                 "view history by typing 'history'.\n");
 
-            //user selects operation
+            //user selects operation 
         }
     }
 }
