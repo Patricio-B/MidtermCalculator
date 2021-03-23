@@ -1,4 +1,5 @@
 ﻿using System;
+using MidtermCalculator.Events;
 using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.CalculatorFunctions
