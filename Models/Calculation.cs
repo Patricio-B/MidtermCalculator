@@ -74,7 +74,7 @@ namespace MidtermCalculator.Models
             {
                 //add to the history
            
-                Console.WriteLine($"{InputEvent.Equals}");
+                //Console.WriteLine($"{InputEvent.Equals}");
             }
         }
     }

@@ -22,16 +22,6 @@ namespace MidtermCalculator
 
         }
 
-        public void DisplayResult(UserInput input)
-        {
-
-            Console.WriteLine(input.Result);
-        }
-
-        public  double CalculateResult(UserInput input)
-        {
-            return input.Result;
-        }
 
         double ICalculate.GetResult()
         {

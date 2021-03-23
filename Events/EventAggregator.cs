@@ -10,21 +10,21 @@ namespace MidtermCalculator.Events
 
         protected virtual void OnOperationEvent(InputEvent e)
         {
-            EventHandler handler = operationEvent;
-            handler?.Invoke(this, e);
+            //EventHandler handler = operationEvent;
+            operationEvent?.Invoke(this, e);
         }
 
         private void FindOperation(string operation)
         {
-            return getOperation(operation);
+            //return getOperation(operation);
             // send an event
             //OnOperationEvent(new InputEvent(userOperation));
         }
 
         private void CreateOperation(object sender, EventArgs e)
         {
-            var operation = FindOperation();
-            OnOperationEvent(new InputEvent(operation));
+            //var operation = FindOperation();
+            //OnOperationEvent(new InputEvent(operation));
         }
 
         /*public void OnNewOperation(Operation operation)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using MidtermCalculator.Interfaces;
 using MidtermCalculator.Models;
 
@@ -13,25 +13,11 @@ namespace MidtermCalculator.Events
             _calculator = calculator;
         }
 
-        public double CalculateResult(UserInput input)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DisplayResult(UserInput input)
-        {
-            throw new NotImplementedException();
-        }
-
-        double ICalculate.GetResult()
-        {
-            throw new NotImplementedException();
-        }
-    }
+        
 
 
 
-    /*{
+    {
    protected ICalculate _calculator;
 
     public Decorator(ICalculate calculator)
