@@ -3,11 +3,11 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.CalculatorFunctions
 {
-    class OpDivide : IOperation
+    class OpMultiply : IOperation
     {
         public Func<double, double, double> getOperation()
         {
-            return Operations.Division;
+            return Operations.Multiplication;
         }
     }
 }
