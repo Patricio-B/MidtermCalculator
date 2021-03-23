@@ -4,6 +4,7 @@ using System.Text;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Interfaces;
 using MidtermCalculator.Publisher;
+using MidtermCalculator.Events;
 
 
 namespace MidtermCalculator.Models
@@ -73,7 +74,7 @@ namespace MidtermCalculator.Models
             {
                 //add to the history
            
-                Console.WriteLine("Calculation: Reacted to the event.");
+                Console.WriteLine($"{InputEvent.Equals}");
             }
         }
     }

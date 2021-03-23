@@ -7,8 +7,42 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator
 {
-    public class Calculator : ICreate
+    public class Calculator : ICalculate
     {
+        private static Calculator _instance;
+        Calculator() { }
+        public static Calculator GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new Calculator();
+            }
+
+            return _instance;
+
+        }
+
+        public void DisplayResult(UserInput input)
+        {
+
+            Console.WriteLine(input.Result);
+        }
+
+        public  double CalculateResult(UserInput input)
+        {
+            return input.Result;
+        }
+
+        double ICalculate.GetResult()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+        
+        
+        
+        /*{
         private AddCalculationList _listCalculations = new AddCalculationList();
 
         //create new event here
@@ -38,4 +72,4 @@ namespace MidtermCalculator
         }
     }
 
-}
+}*/

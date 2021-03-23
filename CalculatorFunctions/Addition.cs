@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using MidtermCalculator.Events;
 using MidtermCalculator.Interfaces;
 
@@ -10,4 +10,4 @@ namespace MidtermCalculator.CalculatorFunctions
 
         public double Add(double a, double b) => a + b;
     }
-}
+}*/

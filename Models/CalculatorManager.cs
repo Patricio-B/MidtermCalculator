@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections;
 using System.Collections.Generic;
 using MidtermCalculator.Publisher;
@@ -23,7 +23,7 @@ namespace MidtermCalculator.Models
                         return number;
 
                     Console.WriteLine("Please enter a valid number. Press ^C to quit.");
-                }*/
+                }
 
                 var input = Convert.ToDouble(Console.ReadLine());
 
@@ -54,4 +54,4 @@ namespace MidtermCalculator.Models
                 return ' ';
             }
     }
-}
+}*/

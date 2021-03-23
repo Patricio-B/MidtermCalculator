@@ -9,8 +9,10 @@ namespace MidtermCalculator.Interfaces
     {
 
         public double GetResult();
+        /*public abstract void DisplayResult(UserInput input);
+        public abstract double CalculateResult(UserInput input);
 
-        /* interface ListCalculations
+         interface ListCalculations
          {
              void ListCalculationMethod();
          }
