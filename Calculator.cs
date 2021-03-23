@@ -11,6 +11,10 @@ namespace MidtermCalculator
     {
         private AddCalculationList _listCalculations = new AddCalculationList();
 
+        //create new event here
+
+        private ICreate _calculator;
+
         public ICalculate Create(double a, double b, Func<double, double, double> _operation)
         {
             var _calculation = Calculation.Create(a, b, _operation);
@@ -18,15 +22,12 @@ namespace MidtermCalculator
             return _calculation;
         }
 
-        /*public ICalculate Create(List<double> listOfValues, Func<List<double>, double> _operation)
-        {
-
-            var _calculation = ListCalculation.Create(listOfValues, _operation);
-            _listCalculations.Add(_calculation);
-            return _calculation;
-        }*/
-
         public Calculator() { }
+
+        public Calculator(ICreate calculator)
+        {
+            _calculator = calculator;
+        }
 
         public List<ICalculate> CreateList()
         {

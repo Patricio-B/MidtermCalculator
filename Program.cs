@@ -30,7 +30,7 @@ namespace MidtermCalculator
             /* var _calculation = new CreateCalculationEvent();
              var _showCalculation = new PrintCalculation();*/
 
-            Func<double, double, double> operation = Operations.Sum;
+            //Func<double, double, double> operation = Operations.Sum;
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
@@ -45,7 +45,7 @@ namespace MidtermCalculator
 
             Console.WriteLine("Which would you like to do first?\n");
 
-            //user selects operation to use
+            //Func<double, double, double> operation = Operations.Sum;
 
             Console.WriteLine("Please enter your first number:\n");
 
@@ -57,9 +57,9 @@ namespace MidtermCalculator
 
             Console.WriteLine("first: " + input1 + " second: " + input2);
 
-            //var result = _calculator.Create(num1, num2, operation);
+            var result = _calculator.Create(input1, input2, operation);
 
-            Console.WriteLine("Result: \n");
+            Console.WriteLine("Result: \n" + result);
 
             //_calculation.GrabCalculation(result);
 
