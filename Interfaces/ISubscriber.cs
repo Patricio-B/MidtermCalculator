@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MidtermCalculator.Interfaces
 {
-    public interface ISubscriber<TEventType>
+    public interface IListen<TEventType>
     {
         void OnEventHandler(TEventType e);
     }
