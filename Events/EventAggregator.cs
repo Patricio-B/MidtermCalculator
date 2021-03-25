@@ -13,23 +13,5 @@ namespace MidtermCalculator.Events
             //EventHandler handler = operationEvent;
             operationEvent?.Invoke(this, e);
         }
-
-        private void FindOperation(string operation)
-        {
-            //return getOperation(operation);
-            // send an event
-            //OnOperationEvent(new InputEvent(userOperation));
-        }
-
-        private void CreateOperation(object sender, EventArgs e)
-        {
-            //var operation = FindOperation();
-            //OnOperationEvent(new InputEvent(operation));
-        }
-
-        /*public void OnNewOperation(Operation operation)
-        {
-
-        }*/
     }
 }

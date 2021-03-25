@@ -4,9 +4,10 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.CalculatorFunctions
 {
-    public class GetOperation : IOperation
+    public class GetOperation
     {
         Dictionary<string, IOperation> operationIndex = new Dictionary<string, IOperation>();
+        private IOperation unassignedOp = new OpUnassigned();
 
         public GetOperation()
         {
@@ -18,7 +19,15 @@ namespace MidtermCalculator.CalculatorFunctions
 
         public IOperation getOperation(string operation)
         {
-            return operationIndex[operation];
+            if (operationIndex.ContainsKey(operation))
+            {
+                return operationIndex[operation];
+            }
+            else
+            {
+                Console.WriteLine("You did not enter a valid number associated with an operation. Please enter a number which corresponds to the operation you would like.");
+                return unassignedOp;
+            }
         }
 
     }

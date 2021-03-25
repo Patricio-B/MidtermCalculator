@@ -1,8 +1,9 @@
-﻿/*using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using MidtermCalculator.Publisher;
 using MidtermCalculator.Listeners;
+using MidtermCalculator.CalculatorFunctions;
 
 namespace MidtermCalculator.Models
 {
@@ -11,9 +12,11 @@ namespace MidtermCalculator.Models
         public CalculatorManager()
         {
         }
-            public static double GetNumber()
-            {
-                /*var isValid = false;
+
+        public static double GetNumber()
+        {
+            /*var isValid = false;
+             
                 while (!isValid)
                 {
                     Console.Write(message);
@@ -23,35 +26,50 @@ namespace MidtermCalculator.Models
                         return number;
 
                     Console.WriteLine("Please enter a valid number. Press ^C to quit.");
-                }
+            }*/
 
-                var input = Convert.ToDouble(Console.ReadLine());
+            var input = Convert.ToDouble(Console.ReadLine());
 
-                //notify print calculation
+            //notify print calculation
 
-                return input;
-            }
+            return input;
+        }
 
-            private static char GetOperator()
+        public static double GetOperator()
+        {
+            /*var isValid = false;
+            while (!isValid)
             {
-                var isValid = false;
-                while (!isValid)
-                {
-                    Console.Write("Please type the operator (/*+-) > ");
-                    var input = Console.ReadKey();
-                    Console.WriteLine();
-                    var operation = input.KeyChar;
-                    if ("/*+-".Contains(operation))
-                    {
-                        isValid = true;
-                        return operation;
-                    }
+             Console.Write("Please type the operator (/*+-) > ");
+             var input = Console.ReadKey();
+             Console.WriteLine();
+             var operation = input.KeyChar;
+             if ("/*+-".Contains(operation))
+             {
+                isValid = true;
+                return operation;
+             }
 
-                    Console.WriteLine("Please enter a valid operator (/, *, +, or -). " +
+            Console.WriteLine("Please enter a valid operator (/, *, +, or -). " +
                                       "Press ^C to quit.");
-                }
-
-                return ' ';
             }
+
+            return ' ';*/
+
+            var input = Convert.ToDouble(Console.ReadLine());
+
+            return input;
+        }
+
+        public Func<double, double, double> userOperation()
+        { 
+            var getOp = new GetOperation();
+
+            var input = Convert.ToString(GetOperator());
+
+            var userOperation = getOp.getOperation(input).getOperation();
+
+            return userOperation;
+        }
     }
-}*/
+}
