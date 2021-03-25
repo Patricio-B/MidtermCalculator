@@ -7,8 +7,10 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator
 {
-    public class Calculator : ICalculate
+    public class Calculator
     {
+        public CalculatorManager _calcManager = new CalculatorManager();
+
         private static Calculator _instance;
         Calculator() { }
         public static Calculator GetInstance()
@@ -22,11 +24,6 @@ namespace MidtermCalculator
 
         }
 
-
-        double ICalculate.GetResult()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
         
