@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Text;
 using MidtermCalculator.CalculatorFunctions;
@@ -20,7 +20,7 @@ namespace MidtermCalculator.Models
 
         /* public List<double> ListOfValues { get; set; }
          //store a bulk operations function
-         public Func<List<double>, double> ListOperation { get; set; } */
+         public Func<List<double>, double> ListOperation { get; set; } 
 
 
         //constructor for 3 param (Double, Double, Functi on)
@@ -50,7 +50,7 @@ namespace MidtermCalculator.Models
 
              return _calculation;
 
-         } */
+         }
 
 
         public static Calculation Create(double a, double b, Func<double, double, double> _operation)
@@ -61,15 +61,15 @@ namespace MidtermCalculator.Models
 
         }
 
-
         //This calls whatever operation was stored i.e. mult, div, add, sub and returns the answer
         public double GetResult()
         {
             return Operation(A, B);
 
-        }
+        } */
 
-        public void Update(IPublish subject)
+
+        /*public void Update(IPublish subject)
         {
             {
                 //add to the history
@@ -78,4 +78,4 @@ namespace MidtermCalculator.Models
             }
         }
     }
-}
+}*/
