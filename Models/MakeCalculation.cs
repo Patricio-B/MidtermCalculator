@@ -33,11 +33,11 @@ namespace MidtermCalculator.Models
 
                 var op = consoleManager.userOperation();
 
-                double _firstInput = consoleManager.GetUserNumber();
+                double a = consoleManager.GetUserNumber();
 
-                double _secondInput = consoleManager.GetUserNumber();
+                double b = consoleManager.GetUserNumber();
 
-                Calculate(_firstInput, _secondInput, op);
+                Calculate(a, b, op);
    
                 choice = Decision();
 
@@ -45,11 +45,13 @@ namespace MidtermCalculator.Models
         }
 
 
-        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+        public void Calculate(double a, double b, Func<double, double, double> action)
         {
+            
             eventAggregator.AddPrintCalcEvent();
-            var _result = _calculator.Create(firstInput, secondInput, action);
+            _calculator.Create(a, b, action);
             eventAggregator.RemovePrintCalcEvent();
+
         }            
         
         bool Decision()

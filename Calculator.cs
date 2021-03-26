@@ -26,29 +26,43 @@ namespace MidtermCalculator
 
         //public CalculatorBuilder _calculatorBuilder = new CalculatorBuilder();
         public CalculationEvent calculationEvent = new CalculationEvent();
+        //private ICreate _calculator;
 
-        private ICreate _calculator;
         //public CalculatorManager calculatorManager = new CalculatorManager();
-
 
         public Calculator() { }
 
-        public Calculator(ICreate calculator)
+         /*public static Calculator GetInstance()
+        {
+            object _calculator = new Calculator();
+            if (_calculator == null)
+            {
+                _calculator = new Calculator();
+            }
+
+            return (Calculator)_calculator;
+
+        }
+
+
+
+       public Calculator(ICreate calculator)
         {
             _calculator = calculator;
-        }
+        }*/
 
         public ICalculate Create(double a, double b, Func<double, double, double> operation)
         {
-            var calculation = _calculator.Create(a, b, operation);
+
+            var calculation = MakeCalculation._calculator.Create(a, b, operation);
             calculationEvent.GetCalculation(calculation);
             return calculation;
         }
 
-        public void SwapCalc(ICreate calculator)
+        /*public void SwapCalc(ICreate calculator)
         {
             _calculator = calculator;
-        }
+        }*/
 
     }
 }

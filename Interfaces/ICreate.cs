@@ -8,7 +8,7 @@ namespace MidtermCalculator.Interfaces
 
     public interface ICreate
     { 
-        ICalculate Create(double a, double b, Func<double, double, double> _operation);
+       public ICalculate Create(double a, double b, Func<double, double, double> _operation);
 
 
     }

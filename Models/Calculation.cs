@@ -9,7 +9,7 @@ using MidtermCalculator.Events;
 
 namespace MidtermCalculator.Models
 {
-    public class Calculation : ICalculate, IListen
+    public class Calculation : ICalculate//, IListen
     {
         //store 1 value
         public double A { get; set; }
