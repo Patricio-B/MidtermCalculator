@@ -1,15 +1,14 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Interfaces;
-using MidtermCalculator.Publisher;
 using MidtermCalculator.Events;
 
 
 namespace MidtermCalculator.Models
 {
-    public class Calculation : ICalculate//, IListen
+    public class Calculation : ICalculate
     {
         //store 1 value
         public double A { get; set; }
@@ -18,7 +17,7 @@ namespace MidtermCalculator.Models
         //store a single operation function
         public Func<double, double, double> Operation { get; set; }
 
-        /* public List<double> ListOfValues { get; set; }
+         public List<double> ListOfValues { get; set; }
          //store a bulk operations function
          public Func<List<double>, double> ListOperation { get; set; } 
 
@@ -35,7 +34,7 @@ namespace MidtermCalculator.Models
         //constructor with 0 param
         public Calculation() { }
 
-        /* public Calculation(List<double> listOfValues, Func<List<double>, double> calculation)
+         public Calculation(List<double> listOfValues, Func<List<double>, double> calculation)
          {
              ListOfValues = listOfValues;
 
@@ -66,7 +65,7 @@ namespace MidtermCalculator.Models
         {
             return Operation(A, B);
 
-        } */
+        } 
 
 
         /*public void Update(IPublish subject)
@@ -76,6 +75,6 @@ namespace MidtermCalculator.Models
            
                 //Console.WriteLine($"{InputEvent.Equals}");
             }
-        }
+        }*/
     }
-}*/
+}
