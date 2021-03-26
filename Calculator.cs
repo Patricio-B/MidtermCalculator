@@ -4,6 +4,7 @@ using System.Text;
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
 using MidtermCalculator.Events;
+using System.Diagnostics;
 
 namespace MidtermCalculator
 {
@@ -40,7 +41,7 @@ namespace MidtermCalculator
 
         public ICalculate Create(double a, double b, Func<double, double, double> operation)
         {
-            var calculation = _calculator.Create(a, b, operation);
+            var calculation = Calculation.Create(a, b, operation);
             calculationEvent.GetCalculation(calculation);
             return calculation;
         }

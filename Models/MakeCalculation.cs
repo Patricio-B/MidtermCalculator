@@ -54,7 +54,7 @@ namespace MidtermCalculator.Models
         
         bool Decision()
         {
-            Console.WriteLine("Would you like to continue? 1.Yes 2.No");
+            Console.WriteLine("Would you like to continue? 1. Yes 2. No" + "\n");
             string _decision = Console.ReadLine();
               
              if (_decision == "1")

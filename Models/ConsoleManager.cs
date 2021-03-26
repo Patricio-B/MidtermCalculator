@@ -56,7 +56,7 @@ namespace MidtermCalculator.Models
         public double GetUserNumber()
         {
             AddGetInputEvent();
-            Console.WriteLine("Please enter a number: ");
+            Console.WriteLine("Please enter a number: " + "\n");
             double input = Convert.ToDouble(Console.ReadLine());
 
             getInput.GetUserInputDigit(input);
@@ -78,9 +78,9 @@ namespace MidtermCalculator.Models
 
             var input = Convert.ToString(GetUserOperation());
 
-            var userOperation = getOp.getOperation(input).getOperation();
+            var userOp = getOp.getOperation(input).getOperation();
 
-            return userOperation;
+            return userOp;
         }
     }
 }

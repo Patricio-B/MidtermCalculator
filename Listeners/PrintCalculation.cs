@@ -10,7 +10,7 @@ namespace MidtermCalculator.Listeners
         public void OnCalc(object sender, CalculationEventArgs calculationEventArgs)
         { 
             {
-                Console.WriteLine("The result of your calculation is: " + calculationEventArgs.Calculation.GetResult());
+                Console.WriteLine("The result of your calculation is: " + calculationEventArgs.Calculation.GetResult() + "\n");
             }
         }
     }
