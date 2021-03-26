@@ -32,19 +32,6 @@ namespace MidtermCalculator.Models
             if (UserInput != null)
                 UserInput(this, new GetUserInput() { UserDigitInput = userInput });
         }
-
-        public void GetUserInputOp(Func<double, double, double> userInput)
-        {
-
-            OnUserInput(userInput);
-        }
-
-        protected void OnUserInput(Func<double, double, double> userInput)
-        {
-
-            if (UserInput != null)
-                UserInput(this, new GetUserInput() { UserOpInput = userInput });
-        }
     }
 
 }

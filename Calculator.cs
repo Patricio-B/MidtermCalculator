@@ -3,45 +3,33 @@ using System.Collections.Generic;
 using System.Text;
 using MidtermCalculator.Models;
 using MidtermCalculator.Interfaces;
-
+using MidtermCalculator.Events;
 
 namespace MidtermCalculator
 {
     public class Calculator
     {
-        public CalculatorManager _calcManager = new CalculatorManager();
+        /* public CalculatorManager _calcManager = new CalculatorManager();
 
-        private static Calculator _instance;
-        Calculator() { }
-        public static Calculator GetInstance()
-        {
-            if (_instance == null)
-            {
-                _instance = new Calculator();
-            }
+         private static Calculator _instance;
+         Calculator() { }
+         public static Calculator GetInstance()
+         {
+             if (_instance == null)
+             {
+                 _instance = new Calculator();
+             }
 
-            return _instance;
+             return _instance;
 
-        }
+         }*/
 
-    }
-}
-        
-        
-        
-        /*{
-        private AddCalculationList _listCalculations = new AddCalculationList();
-
-        //create new event here
+        //public CalculatorBuilder _calculatorBuilder = new CalculatorBuilder();
+        public CalculationEvent calculationEvent = new CalculationEvent();
 
         private ICreate _calculator;
+        //public CalculatorManager calculatorManager = new CalculatorManager();
 
-        public ICalculate Create(double a, double b, Func<double, double, double> _operation)
-        {
-            var _calculation = Calculation.Create(a, b, _operation);
-            _listCalculations.Add(_calculation);
-            return _calculation;
-        }
 
         public Calculator() { }
 
@@ -50,13 +38,18 @@ namespace MidtermCalculator
             _calculator = calculator;
         }
 
-        public List<ICalculate> CreateList()
+        public ICalculate Create(double a, double b, Func<double, double, double> operation)
         {
-            var result = _listCalculations.Calculations;
-
-            return result;
-
+            var calculation = _calculator.Create(a, b, operation);
+            calculationEvent.GetCalculation(calculation);
+            return calculation;
         }
-    }
 
-}*/
+        public void SwapCalc(ICreate calculator)
+        {
+            _calculator = calculator;
+        }
+
+    }
+}
+       
