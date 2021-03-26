@@ -33,7 +33,7 @@ namespace MidtermCalculator.Models
             return null;
         }*/
 
-        public GetInput getInput = new GetInput();
+        public static GetInput getInput = new GetInput();
         public SaveUserInput saveUserInput = new SaveUserInput();
 
         public ConsoleManager() { }
@@ -71,6 +71,8 @@ namespace MidtermCalculator.Models
             var input = Convert.ToDouble(Console.ReadLine());
 
             //notify print calculation
+
+            getInput.GetUserInputDigit(input);
 
             return input;
         }

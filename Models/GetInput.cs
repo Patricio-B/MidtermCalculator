@@ -14,7 +14,7 @@ namespace MidtermCalculator.Models
             OnUserInput(userInput);
         }
 
-        protected void OnUserInput(string userInput)
+        protected virtual void OnUserInput(string userInput)
         {
             if (UserInput != null)
                 UserInput(this, new GetUserInput() { UserMenuInput = userInput });
@@ -26,7 +26,7 @@ namespace MidtermCalculator.Models
             OnUserInput(userInput);
         }
 
-        protected  void OnUserInput(double userInput)
+        protected virtual void OnUserInput(double userInput)
         {
 
             if (UserInput != null)
