@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using MidtermCalculator.Models;
-using MidtermCalculator.Listeners;
-using MidtermCalculator.Publisher;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Events;
 

@@ -19,7 +19,7 @@ namespace MidtermCalculator.Events
         Calculator _calculator;
         ConsoleManager consoleManager = new ConsoleManager();
         PrintCalculation printCalc = new PrintCalculation();
-        History history = new History();
+        //History history = new History();
 
         public EventAggregator(Calculator calculator)
         {

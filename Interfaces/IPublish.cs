@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 
 namespace MidtermCalculator.Interfaces
@@ -15,3 +15,4 @@ namespace MidtermCalculator.Interfaces
         void Notify();
     }
 }
+*/

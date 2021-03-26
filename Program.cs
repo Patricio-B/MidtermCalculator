@@ -1,7 +1,5 @@
 ﻿using System;
-using MidtermCalculator.Listeners;
 using MidtermCalculator.CalculatorFunctions;
-using MidtermCalculator.Publisher;
 using MidtermCalculator.Models;
 
 namespace MidtermCalculator
@@ -13,7 +11,9 @@ namespace MidtermCalculator
            //Calculator class instantiation into a calculator object
             Calculator _calculator = new Calculator();
 
-            var publisher = new Publish();
+            ConsoleManager consoleManager = new ConsoleManager();
+
+            /*var publisher = new Publish();
             var calculationObserver = new Calculation();
             publisher.Attach(calculationObserver);
 
@@ -25,12 +25,10 @@ namespace MidtermCalculator
 
             publisher.Detach(printCalc);
 
-            publisher.PrintCalc();
+            publisher.PrintCalc();*/
 
-             var _calculation = new CreateCalculationEvent();
-             var _showCalculation = new PrintCalculation();
-
-            Func<double, double, double> operation = Operations.Sum;
+             var _calculation = new ConsoleManager();
+             //var _showCalculation = new PrintCalculation();
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
@@ -49,11 +47,11 @@ namespace MidtermCalculator
 
             Console.WriteLine("Please enter your first number:\n");
 
-            var a = CalculatorManager.GetNumber();
+            var a = ConsoleManager.GetUserNumber();
 
             Console.WriteLine("Please enter your second number:\n");
 
-            var b = CalculatorManager.GetNumber();
+            var b = ConsoleManager.GetUserNumber();
 
             Console.WriteLine("first: " + a + " second: " + b);
 

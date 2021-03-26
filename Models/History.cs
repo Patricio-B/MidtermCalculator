@@ -1,11 +1,11 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Text;
 using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Models
 {
-    public class History : ICreate
+    public class History
     {
         private AddCalculationList _listCalculations = new AddCalculationList();
 
@@ -18,7 +18,7 @@ namespace MidtermCalculator.Models
 
        // public Calculator() { }
 
-        public List<ICalculate> CreateList()
+        /*public List<ICalculate> CreateList()
         {
             var result = _listCalculations.Calculations;
 
@@ -27,4 +27,5 @@ namespace MidtermCalculator.Models
         }
     }
 
-}
+}*/
+      

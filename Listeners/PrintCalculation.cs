@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MidtermCalculator.Interfaces;
-using MidtermCalculator.Publisher;
+using MidtermCalculator.Events;
 
 namespace MidtermCalculator.Listeners
 {
-    public class PrintCalculation : IListen
+    public class PrintCalculation
     { 
-        public void Update(IPublish subject)
+        public void OnCalc(object sender, CalculationEventArgs calculationEventArgs)
         { 
             {
-                Console.WriteLine("PrintCalculation: Reacted to the event.");
+                Console.WriteLine("The result of your calculation is: " + calculationEventArgs.Calculation.GetResult());
             }
         }
     }
