@@ -53,9 +53,17 @@ namespace MidtermCalculator
 
             var b = ConsoleManager.GetUserNumber();
 
+
             Console.WriteLine("first: " + a + " second: " + b);
 
-            //var result = _calculator.Create(num1, num2, operation);
+            public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+            {
+
+                _consoleEvent.RegisterDisplayCalculationEvent();
+                var _result = _calculator.CreateCalculation(firstInput, secondInput, action);
+                _consoleEvent.UnregisterDisplayCalculationEvent();
+
+            }
 
             Console.WriteLine("Result: \n");
 
@@ -65,6 +73,15 @@ namespace MidtermCalculator
                 "view history by typing 'history'.\n");
 
             //user selects operation 
+        }
+
+        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+        {
+
+            _consoleEvent.RegisterDisplayCalculationEvent();
+            var _result = _calculator.CreateCalculation(firstInput, secondInput, action);
+            _consoleEvent.UnregisterDisplayCalculationEvent();
+
         }
     }
 }

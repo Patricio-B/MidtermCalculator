@@ -17,9 +17,13 @@ namespace MidtermCalculator.Events
          }*/
 
         Calculator _calculator;
-        ConsoleManager consoleManager = new ConsoleManager();
+        
         PrintCalculation printCalc = new PrintCalculation();
+        
+        ConsoleManager consoleManager = new ConsoleManager();
+        
         //History history = new History();
+
 
         public EventAggregator(Calculator calculator)
         {
@@ -34,8 +38,24 @@ namespace MidtermCalculator.Events
         public void DisplayUserInputs()
         {
             consoleManager.PrintInput();
+
             consoleManager.RemoveGetInputEvent();
         }
+
+        public void RegisterDisplayCalculationEvent()
+        {
+            _calculator.calculationEvent.calcComplete += printCalc.OnCalc;
+
+        }
+
+        public void UnregisterDisplayCalculationEvent()
+        {
+            _calculator.calculationEvent.calcComplete -= printCalc.OnCalc;
+
+
+        }
+
+       
 
     }
 }
