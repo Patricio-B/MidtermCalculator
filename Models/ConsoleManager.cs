@@ -33,7 +33,7 @@ namespace MidtermCalculator.Models
             return null;
         }*/
 
-        public static GetInput getInput = new GetInput();
+        public GetInput getInput = new GetInput();
         public SaveUserInput saveUserInput = new SaveUserInput();
 
         public ConsoleManager() { }
@@ -53,24 +53,11 @@ namespace MidtermCalculator.Models
             saveUserInput.PrintInputs();
         }
 
-        public static double GetUserNumber()
+        public double GetUserNumber()
         {
-            /*var isValid = false;
-             
-                while (!isValid)
-                {
-                    Console.Write(message);
-                    var input = Console.ReadLine();
-                    isValid = double.TryParse(input, out var number);
-                    if (isValid)
-                        return number;
-
-                    Console.WriteLine("Please enter a valid number. Press ^C to quit.");
-            }*/
-
-            var input = Convert.ToDouble(Console.ReadLine());
-
-            //notify print calculation
+            AddGetInputEvent();
+            Console.WriteLine("Please enter a number: ");
+            double input = Convert.ToDouble(Console.ReadLine());
 
             getInput.GetUserInputDigit(input);
 
@@ -79,24 +66,6 @@ namespace MidtermCalculator.Models
 
         public static double GetUserOperation()
         {
-            /*var isValid = false;
-            while (!isValid)
-            {
-             Console.Write("Please type the operator (/*+-) > ");
-             var input = Console.ReadKey();
-             Console.WriteLine();
-             var operation = input.KeyChar;
-             if ("/*+-".Contains(operation))
-             {
-                isValid = true;
-                return operation;
-             }
-
-            Console.WriteLine("Please enter a valid operator (/, *, +, or -). " +
-                                      "Press ^C to quit.");
-            }
-
-            return ' ';*/
 
             var input = Convert.ToDouble(Console.ReadLine());
 

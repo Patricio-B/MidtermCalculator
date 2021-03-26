@@ -1,6 +1,7 @@
 ﻿using System;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Models;
+using MidtermCalculator.Events;
 
 namespace MidtermCalculator
 {
@@ -12,6 +13,8 @@ namespace MidtermCalculator
             Calculator _calculator = new Calculator();
 
             ConsoleManager consoleManager = new ConsoleManager();
+
+            EventAggregator eventAggregator = new EventAggregator(_calculator);
 
             /*var publisher = new Publish();
             var calculationObserver = new Calculation();
@@ -27,7 +30,7 @@ namespace MidtermCalculator
 
             publisher.PrintCalc();*/
 
-             var _calculation = new ConsoleManager();
+            var _calculation = new ConsoleManager();
              //var _showCalculation = new PrintCalculation();
 
             Console.WriteLine("Welcome to the calculator. You can add, subtract," +
@@ -56,14 +59,6 @@ namespace MidtermCalculator
 
             Console.WriteLine("first: " + a + " second: " + b);
 
-            public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
-            {
-
-                _consoleEvent.RegisterDisplayCalculationEvent();
-                var _result = _calculator.CreateCalculation(firstInput, secondInput, action);
-                _consoleEvent.UnregisterDisplayCalculationEvent();
-
-            }
 
             Console.WriteLine("Result: \n");
 
@@ -74,14 +69,14 @@ namespace MidtermCalculator
 
             //user selects operation 
         }
+            public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+            {
 
-        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
-        {
+                eventAggregator.AddPrintCalcEvent();
+                var _result = _calculator.Create(firstInput, secondInput, action);
+                eventAggregator.RemovePrintCalcEvent();
 
-            _consoleEvent.RegisterDisplayCalculationEvent();
-            var _result = _calculator.CreateCalculation(firstInput, secondInput, action);
-            _consoleEvent.UnregisterDisplayCalculationEvent();
 
-        }
+            }
     }
 }

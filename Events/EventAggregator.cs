@@ -6,7 +6,7 @@ using MidtermCalculator.Listeners;
 
 namespace MidtermCalculator.Events
 {
-    public class EventAggregator : IEventAggregator
+    public class EventAggregator
     {
         /* public event EventHandler<InputEvent> operationEvent;
 
@@ -42,13 +42,13 @@ namespace MidtermCalculator.Events
             consoleManager.RemoveGetInputEvent();
         }
 
-        public void RegisterDisplayCalculationEvent()
+        public void AddPrintCalcEvent()
         {
             _calculator.calculationEvent.calcComplete += printCalc.OnCalc;
 
         }
 
-        public void UnregisterDisplayCalculationEvent()
+        public void RemovePrintCalcEvent()
         {
             _calculator.calculationEvent.calcComplete -= printCalc.OnCalc;
 
