@@ -9,8 +9,15 @@ namespace MidtermCalculator
     {
         static void Main(string[] args)
         {
-           //Calculator class instantiation into a calculator object
-            Calculator _calculator = new Calculator();
+
+            MakeCalculation makeCalculation = new MakeCalculation();
+
+            makeCalculation.Go();
+
+
+
+            //Calculator class instantiation into a calculator object
+            /*Calculator _calculator = new Calculator();
 
             ConsoleManager consoleManager = new ConsoleManager();
 
@@ -30,10 +37,10 @@ namespace MidtermCalculator
 
             publisher.PrintCalc();*/
 
-            var _calculation = new ConsoleManager();
-             //var _showCalculation = new PrintCalculation();
+            //var _calculation = new ConsoleManager();
+            //var _showCalculation = new PrintCalculation();
 
-            Console.WriteLine("Welcome to the calculator. You can add, subtract," +
+            /*Console.WriteLine("Welcome to the calculator. You can add, subtract," +
                 "multiply, divide, square, and square-root. Please choose which " +
                 "functionalities you would like by typing in the number associated " +
                 "with it.\n");
@@ -77,6 +84,7 @@ namespace MidtermCalculator
                 eventAggregator.RemovePrintCalcEvent();
 
 
-            }
+            }*/
+        }
     }
 }

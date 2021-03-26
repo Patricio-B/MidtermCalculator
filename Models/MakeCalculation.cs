@@ -29,54 +29,53 @@ namespace MidtermCalculator.Models
             while (choice)
             {
                 Console.WriteLine(" 1. Addition\n 2. Subtraction\n 3. Multiplication" +
-            "\n 4. Division\n 5. Square\n 6. Square Root\n");
+                "\n 4. Division\n 5. Square\n 6. Square Root\n");
+
                 var op = consoleManager.userOperation();
+
                 double _firstInput = consoleManager.GetUserNumber();
 
                 double _secondInput = consoleManager.GetUserNumber();
 
                 Calculate(_firstInput, _secondInput, op);
    
-                choice = decision();
+                choice = Decision();
 
             }
         }
 
 
-            public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
-            {
-
-                eventAggregator.AddPrintCalcEvent();
-                var _result = _calculator.Create(firstInput, secondInput, action);
-                eventAggregator.RemovePrintCalcEvent();
-
-            }            
+        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+        {
+            eventAggregator.AddPrintCalcEvent();
+            var _result = _calculator.Create(firstInput, secondInput, action);
+            eventAggregator.RemovePrintCalcEvent();
+        }            
         
-            bool decision()
-
-            {
-                Console.WriteLine("Would you like to continue? 1.Yes 2.No");
-                string _decision = Console.ReadLine();
+        bool Decision()
+        {
+            Console.WriteLine("Would you like to continue? 1.Yes 2.No");
+            string _decision = Console.ReadLine();
               
-                if (_decision == "1")
-                {
-                    return true;
-                }
-                return false;
+             if (_decision == "1")
+             {
+                return true;
+             }
 
-            }
+             return false;
+        }
 
 
-            void StoreUserInput()
-            {
-                consoleManager.AddGetInputEvent();
-              }
-            public void PrintUserInputs()
-            {
-                consoleManager.PrintInput();
-                consoleManager.RemoveGetInputEvent();
-            }
+        void StoreUserInput()
+        {
+            consoleManager.AddGetInputEvent();
+        }
 
+        public void PrintUserInputs()
+        {
+            consoleManager.PrintInput();
+            consoleManager.RemoveGetInputEvent();
+        }
 
 
           /*  var _calculation = new ConsoleManager();
