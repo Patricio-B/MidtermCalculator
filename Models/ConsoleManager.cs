@@ -3,6 +3,7 @@ using System.Reflection;
 using MidtermCalculator.Models;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Events;
+using MidtermCalculator.Listeners;
 
 namespace MidtermCalculator.Models
 {
@@ -56,7 +57,7 @@ namespace MidtermCalculator.Models
         public double GetUserNumber()
         {
             AddGetInputEvent();
-            Console.WriteLine("Please enter a number: " + "\n");
+            ConsoleMessages.ConsoleEnterNumber();
             double input = Convert.ToDouble(Console.ReadLine());
 
             getInput.GetUserInputDigit(input);
@@ -78,7 +79,22 @@ namespace MidtermCalculator.Models
 
             var input = Convert.ToString(GetUserOperation());
 
+            /*if (input == "5" || "6")
+                var input = Convert.ToString(GetUserOperation());
+                var userOp = getOp.getOtherOperations(input).getOtherOperations();*/
+
             var userOp = getOp.getOperation(input).getOperation();
+
+            return userOp;
+        }
+
+        public Func<double, double> userOperations()
+        {
+            var getOp = new GetOtherOperations();
+
+            var input = Convert.ToString(GetUserOperation());
+
+            var userOp = getOp.getOtherOperations(input).getOtherOperations();
 
             return userOp;
         }

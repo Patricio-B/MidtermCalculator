@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace MidtermCalculator
 {
-    public class Calculator
+    public class Calculator : ICreate
     {
         /* public CalculatorManager _calcManager = new CalculatorManager();
 
@@ -31,25 +31,30 @@ namespace MidtermCalculator
         private ICreate _calculator;
         //public CalculatorManager calculatorManager = new CalculatorManager();
 
+        public Calculation makeCalc(ICreate calculator, double a, double b)
+        {
+            return new Calculation();
+        }
+
 
         public Calculator() { }
 
-        public Calculator(ICreate calculator)
+        /*public Calculator(ICreate calculator)
         {
             _calculator = calculator;
-        }
+        }*/
 
-        public ICalculate Create(double a, double b, Func<double, double, double> operation)
+        public ICalculate Create(double a, double b, Func<double, double, double> operation, ICreate calculator)
         {
-            var calculation = Calculation.Create(a, b, operation);
+            var calculation = new Calculation(a, b, operation);
             calculationEvent.GetCalculation(calculation);
             return calculation;
         }
 
-        public void SwapCalc(ICreate calculator)
+        /*public void SwapCalc(ICreate calculator)
         {
             _calculator = calculator;
-        }
+        }*/
 
     }
 }

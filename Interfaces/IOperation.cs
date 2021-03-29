@@ -7,5 +7,7 @@ namespace MidtermCalculator.Interfaces
     public interface IOperation
     {
         public Func<double, double, double> getOperation();
+
+        //public Func<double, double> getOtherOperations();
     }
 }
