@@ -4,13 +4,16 @@ using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Models;
 using MidtermCalculator.Events;
 using MidtermCalculator.Interfaces;
+using MidtermCalculator.Listeners;
 
 namespace MidtermCalculator.Models
 {
+    //delegate void ConsoleMessage();
+
+    //ConsoleMessages consoleMessage = new ConsoleMessages();
 
     public class MakeCalculation
     {
-
         //Calculator class instantiation into a calculator object
         public static Calculator _calculator = new Calculator();
 
@@ -22,15 +25,18 @@ namespace MidtermCalculator.Models
         public void Go()
         {
             bool choice = true;
-            Console.WriteLine("Welcome to the calculator. You can add, subtract," +
-            "multiply, divide, square, and square-root. Please choose which " +
-            "functionalities you would like by typing in the number associated " +
-            "with it.\n");
+
+            //ConsoleWelcome();
+            //ConsoleMessage welcome = ConsoleMessages.ConsoleWelcome();
+            //ConsoleMessage obj = ConsoleMessages.ConsoleWelcome;
+            ConsoleMessages.ConsoleWelcome();
 
             while (choice)
             {
-                Console.WriteLine(" 1. Addition\n 2. Subtraction\n 3. Multiplication" +
-                "\n 4. Division\n 5. Square\n 6. Square Root\n");
+                //ConsoleOperations();
+                //obj += ConsoleMessages.ConsoleOperations;
+
+                ConsoleMessages.ConsoleOperations();
 
                 var op = consoleManager.userOperation();
 
@@ -45,7 +51,6 @@ namespace MidtermCalculator.Models
             }
         }
 
-
         public void Calculate(double firstInput, double secondInput, Func<double, double, double> action, ICreate calculator)
         {
             eventAggregator.AddPrintCalcEvent();
@@ -55,7 +60,8 @@ namespace MidtermCalculator.Models
         
         bool Decision()
         {
-            Console.WriteLine("Would you like to continue? 1. Yes 2. No" + "\n");
+            ConsoleMessages.ConsoleDecision();
+
             string _decision = Console.ReadLine();
               
              if (_decision == "1")
@@ -65,7 +71,6 @@ namespace MidtermCalculator.Models
 
              return false;
         }
-
 
         void StoreUserInput()
         {

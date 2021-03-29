@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using MidtermCalculator.Interfaces;
+using MidtermCalculator.CalculatorFunctions;
 
-namespace MidtermCalculator.CalculatorFunctions
+namespace MidtermCalculator.Listeners
 {
     public class GetOperation
     {
@@ -28,10 +29,9 @@ namespace MidtermCalculator.CalculatorFunctions
             }
             else
             {
-                Console.WriteLine("You did not enter a valid number associated with an operation. Please enter a number which corresponds to the operation you would like.");
+                ConsoleMessages.ConsoleInvalid();
                 return unassignedOp;
             }
         }
-
     }
 }
