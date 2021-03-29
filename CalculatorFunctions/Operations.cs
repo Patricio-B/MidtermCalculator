@@ -11,6 +11,8 @@ namespace MidtermCalculator.CalculatorFunctions
         public static Func<double, double, double> Subtraction = (a, b) => a - b;
         public static Func<double, double, double> Multiplication = (a, b) => a * b;
         public static Func<double, double, double> Division = (a, b) => a / b;
+        public static Func<double, double> Square = (a) => Math.Pow(a, 2);
+        public static Func<double, double> SquareRoot = (a) => Math.Sqrt(a);
         public static Func<double, double, double> Unassigned = (a, b) => 0;
 
 

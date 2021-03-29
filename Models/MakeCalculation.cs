@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MidtermCalculator.CalculatorFunctions;
 using MidtermCalculator.Models;
 using MidtermCalculator.Events;
+using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.Models
 {
@@ -37,7 +38,7 @@ namespace MidtermCalculator.Models
 
                 double _secondInput = consoleManager.GetUserNumber();
 
-                Calculate(_firstInput, _secondInput, op);
+                Calculate(_firstInput, _secondInput, op, _calculator);
    
                 choice = Decision();
 
@@ -45,10 +46,10 @@ namespace MidtermCalculator.Models
         }
 
 
-        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action)
+        public void Calculate(double firstInput, double secondInput, Func<double, double, double> action, ICreate calculator)
         {
             eventAggregator.AddPrintCalcEvent();
-            var _result = _calculator.Create(firstInput, secondInput, action);
+            var _result = _calculator.Create(firstInput, secondInput, action, calculator);
             eventAggregator.RemovePrintCalcEvent();
         }            
         

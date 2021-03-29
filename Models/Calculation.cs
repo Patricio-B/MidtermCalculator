@@ -52,7 +52,7 @@ namespace MidtermCalculator.Models
          }
 
 
-        public static Calculation Create(double a, double b, Func<double, double, double> _operation)
+        public static Calculation Create(double a, double b, Func<double, double, double> _operation, ICreate calculator)
         {
             var _calculation = new Calculation(a, b, _operation);
 
