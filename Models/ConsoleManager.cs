@@ -57,7 +57,6 @@ namespace MidtermCalculator.Models
         public double GetUserNumber()
         {
             AddGetInputEvent();
-            ConsoleMessages.ConsoleEnterNumber();
             double input = Convert.ToDouble(Console.ReadLine());
 
             getInput.GetUserInputDigit(input);

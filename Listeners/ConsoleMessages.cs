@@ -1,11 +1,15 @@
 ﻿using System;
+using MidtermCalculator;
+using MidtermCalculator.Interfaces;
+
 namespace MidtermCalculator.Listeners
 {
-    public class ConsoleMessages
+    public class ConsoleMessages : IMessage
     {
-        public static void ConsoleWelcome()
+
+        public static ConsoleWelcome()
         {
-            Console.WriteLine("Welcome to the calculator. You can add, subtract," +
+           return  Console.WriteLine("Welcome to the calculator. You can add, subtract," +
             "multiply, divide, square, and square-root. Please choose which " +
             "functionalities you would like by typing in the number associated " +
             "with it.\n");
