@@ -3,11 +3,11 @@ using MidtermCalculator.Interfaces;
 
 namespace MidtermCalculator.CalculatorFunctions
 {
-    class OpSquareRoot : IOtherOperations
+    class OpSquareRoot : IOperation
     {
-        public Func<double, double> getOtherOperations()
+        public Func<double, double, double> getOperation()
         {
-            return OtherOperations.SquareRoot;
+            return Operations.SquareRoot;
         }
     }
 }

@@ -88,7 +88,7 @@ namespace MidtermCalculator.Models
             return userOp;
         }
 
-        public Func<double, double> userOperations()
+        /*public Func<double, double> userOperations()
         {
             var getOp = new GetOtherOperations();
 
@@ -97,6 +97,6 @@ namespace MidtermCalculator.Models
             var userOp = getOp.getOtherOperations(input).getOtherOperations();
 
             return userOp;
-        }
+        }*/
     }
 }

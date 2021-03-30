@@ -40,11 +40,24 @@ namespace MidtermCalculator.Models
 
                 var op = consoleManager.userOperation();
 
+               
+
+
+
                 double _firstInput = consoleManager.GetUserNumber();
 
-                double _secondInput = consoleManager.GetUserNumber();
+                if (op == Operations.SquareRoot)
+                {
+                    double _secondInput = 0;
+                    Calculate(_firstInput, _secondInput, op, _calculator);
+                }
+                else
+                {
+                    double _secondInput = consoleManager.GetUserNumber();
+                    Calculate(_firstInput, _secondInput, op, _calculator);
+                }
 
-                Calculate(_firstInput, _secondInput, op, _calculator);
+                //Calculate(_firstInput, _secondInput, op, _calculator);
    
                 choice = Decision();
 
