@@ -7,9 +7,9 @@ namespace MidtermCalculator.Listeners
     public class ConsoleMessages : IMessage
     {
 
-        public static ConsoleWelcome()
+        public static void ConsoleWelcome()
         {
-           return  Console.WriteLine("Welcome to the calculator. You can add, subtract," +
+           Console.WriteLine("Welcome to the calculator. You can add, subtract," +
             "multiply, divide, square, and square-root. Please choose which " +
             "functionalities you would like by typing in the number associated " +
             "with it.\n");

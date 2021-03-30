@@ -56,6 +56,8 @@ namespace MidtermCalculator.Models
         {
             var _calculation = new Calculation(a, b, _operation);
 
+            calculator.Calculations.Add(_calculation);
+
             return _calculation;
 
         }

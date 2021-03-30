@@ -9,6 +9,10 @@ namespace MidtermCalculator.Interfaces
     {
 
         public double GetResult();
+
+        public double GetResult(ICalculate calculator);
+
+        List<Calculation> Calculations { get; set; }
         /*public abstract void DisplayResult(UserInput input);
         public abstract double CalculateResult(UserInput input);
 
