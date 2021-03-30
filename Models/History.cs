@@ -19,7 +19,8 @@ namespace MidtermCalculator.Models
 
         public void Add(ICreate calculations)
         {
-            history.Add(calculations);
+            //history.Add(calculations);
         }
+    }
 
 }

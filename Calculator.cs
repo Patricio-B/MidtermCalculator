@@ -28,7 +28,7 @@ namespace MidtermCalculator
         //public CalculatorBuilder _calculatorBuilder = new CalculatorBuilder();
         public CalculationEvent calculationEvent = new CalculationEvent();
 
-        private ICreate _calculator;
+        //private ICreate _calculator;
         //public CalculatorManager calculatorManager = new CalculatorManager();
 
         public Calculation makeCalc(ICreate calculator, double a, double b)

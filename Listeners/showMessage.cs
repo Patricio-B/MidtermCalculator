@@ -11,16 +11,16 @@ namespace MidtermCalculator.Listeners
     {
         Dictionary<string, IMessage> MessageIndex = new Dictionary<string, IMessage>();
         //Dictionary<string, IOtherOperations> operationIndex2 = new Dictionary<string, IOtherOperations>();
-        private IOperation unassignedMsg = new OpUnassigned();
+        //private IOperation unassignedMsg = new OpUnassigned();
+        private IMessage unassignedMsg = new ConsoleInvalid();
 
         public showMessage()
         {
             MessageIndex["1"] = new ConsoleWelcome();
-            MessageIndex["2"] = new OpSubtraction();
-            MessageIndex["3"] = new OpMultiply();
-            MessageIndex["4"] = new OpDivide();
-            MessageIndex["5"] = new OpSquare();
-            MessageIndex["6"] = new OpSquareRoot();
+            MessageIndex["2"] = new ConsoleOperations();
+            MessageIndex["3"] = new ConsoleInvalid();
+            MessageIndex["4"] = new ConsoleEnterNumber();
+            MessageIndex["5"] = new ConsoleDecision();
         }
 
         public IMessage displayMessage(string msg)
@@ -31,7 +31,7 @@ namespace MidtermCalculator.Listeners
             }
             else
             {
-                ConsoleMessages.ConsoleInvalid();
+                //ConsoleMessages.ConsoleInvalid();
                 return unassignedMsg;
             }
         }

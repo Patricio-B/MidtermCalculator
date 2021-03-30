@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using MidtermCalculator;
 using MidtermCalculator.Interfaces;
 
@@ -36,4 +36,4 @@ namespace MidtermCalculator.Listeners
             Console.WriteLine("Would you like to continue with calculation? 1. Yes 2. No \n");
         }
     }
-}
+}*/

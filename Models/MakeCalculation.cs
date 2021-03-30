@@ -21,6 +21,8 @@ namespace MidtermCalculator.Models
 
         EventAggregator eventAggregator = new EventAggregator(_calculator);
 
+        showMessage showMsg = new showMessage();
+
 
         public void Go()
         {
@@ -29,20 +31,17 @@ namespace MidtermCalculator.Models
             //ConsoleWelcome();
             //ConsoleMessage welcome = ConsoleMessages.ConsoleWelcome();
             //ConsoleMessage obj = ConsoleMessages.ConsoleWelcome;
-            ConsoleMessages.ConsoleWelcome();
+            //ConsoleMessages.ConsoleWelcome();
+            showMsg.displayMessage("1");
 
             while (choice)
             {
                 //ConsoleOperations();
                 //obj += ConsoleMessages.ConsoleOperations;
 
-                ConsoleMessages.ConsoleOperations();
+                showMsg.displayMessage("2");
 
                 var op = consoleManager.userOperation();
-
-               
-
-
 
                 double _firstInput = consoleManager.GetUserNumber();
 
@@ -73,7 +72,7 @@ namespace MidtermCalculator.Models
         
         bool Decision()
         {
-            ConsoleMessages.ConsoleDecision();
+            showMsg.displayMessage("5");
 
             string _decision = Console.ReadLine();
               

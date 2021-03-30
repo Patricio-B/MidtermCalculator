@@ -87,6 +87,21 @@ namespace MidtermCalculator.Models
             return userOp;
         }
 
+        public void printMessage()
+        {
+            var getMsg = new showMessage();
+
+            var input = Convert.ToString(GetUserOperation());
+
+            /*if (input == "5" || "6")
+                var input = Convert.ToString(GetUserOperation());
+                var userOp = getOp.getOtherOperations(input).getOtherOperations();*/
+
+            //var userOp = getOp.getOperation(input).getOperation();
+
+           // return userOp;
+        }
+
         /*public Func<double, double> userOperations()
         {
             var getOp = new GetOtherOperations();

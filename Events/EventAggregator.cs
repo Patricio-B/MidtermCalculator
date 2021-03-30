@@ -22,7 +22,7 @@ namespace MidtermCalculator.Events
         
         ConsoleManager consoleManager = new ConsoleManager();
 
-        ConsoleMessages consoleMessages = new ConsoleMessages();
+        showMessage showMsg = new showMessage();
 
         //History history = new History();
 
@@ -35,7 +35,8 @@ namespace MidtermCalculator.Events
         void StoreUserInput()
         {
             consoleManager.AddGetInputEvent();
-            consoleMessages.ConsoleEnterNumber();
+            //consoleMessages.ConsoleEnterNumber();
+            showMsg.displayMessage("4");
         }
 
         public void DisplayUserInputs()

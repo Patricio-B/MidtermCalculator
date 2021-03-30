@@ -29,7 +29,6 @@ namespace MidtermCalculator.Listeners
             }
             else
             {
-                ConsoleMessages.ConsoleInvalid();
                 return unassignedOp;
             }
         }

@@ -7,6 +7,6 @@ namespace MidtermCalculator.Interfaces
 {
    public interface IMessage
     {
-        public delegate showMessage();
+        public delegate void showMessage();
     }
 }
