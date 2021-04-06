@@ -21,7 +21,9 @@ namespace MidtermCalculator.Events
         PrintCalculation printCalc = new PrintCalculation();
         
         ConsoleManager consoleManager = new ConsoleManager();
-        
+
+        showMessage showMsg = new showMessage();
+
         //History history = new History();
 
 
@@ -33,10 +35,13 @@ namespace MidtermCalculator.Events
         void StoreUserInput()
         {
             consoleManager.AddGetInputEvent();
+            //consoleMessages.ConsoleEnterNumber();
+            showMsg.displayMessage("4");
         }
 
         public void DisplayUserInputs()
         {
+            Console.WriteLine("Hi display");
             consoleManager.PrintInput();
 
             consoleManager.RemoveGetInputEvent();
@@ -45,13 +50,14 @@ namespace MidtermCalculator.Events
         public void AddPrintCalcEvent()
         {
             _calculator.calculationEvent.calcComplete += printCalc.OnCalc;
-
+  
         }
 
         public void RemovePrintCalcEvent()
         {
+            Console.WriteLine("bye print calc");
             _calculator.calculationEvent.calcComplete -= printCalc.OnCalc;
-
+            DisplayUserInputs();
 
         }
 
