@@ -8,6 +8,5 @@ namespace MidtermCalculator.Interfaces
     {
         public Func<double, double, double> getOperation();
 
-        //public Func<double, double> getOtherOperations();
     }
 }

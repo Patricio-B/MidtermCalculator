@@ -8,7 +8,6 @@ namespace MidtermCalculator.Listeners
     public class GetOperation
     {
         Dictionary<string, IOperation> operationIndex = new Dictionary<string, IOperation>();
-        //Dictionary<string, IOtherOperations> operationIndex2 = new Dictionary<string, IOtherOperations>();
         private IOperation unassignedOp = new OpUnassigned();
 
         public GetOperation()

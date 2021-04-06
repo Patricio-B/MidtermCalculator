@@ -9,20 +9,6 @@ namespace MidtermCalculator.Interfaces
     {
 
         public double GetResult();
-        /*public abstract void DisplayResult(UserInput input);
-        public abstract double CalculateResult(UserInput input);
 
-         interface ListCalculations
-         {
-             void ListCalculationMethod();
-         }
-
-         public class BulkCalculation : Calculation
-         {
-             public void ListCalculationMethod()
-             {
-
-             }
-         } */
     }
 }
